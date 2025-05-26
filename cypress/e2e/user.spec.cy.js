@@ -40,7 +40,7 @@ describe('Orange HRM tests', () => {
     cy.get(selectorList.dateCloseButton).click()
 
     cy.get(selectorList.submitButton).eq(0).click()
-    //cy.get('body').should('contain', 'Successfully Updated')
+    //cy.get('body').should('contain', 'Successfully Updated') - Funcionara de ambas as formas, essa e a de baixo!
     cy.get('.oxd-toast-close')
   })
 
