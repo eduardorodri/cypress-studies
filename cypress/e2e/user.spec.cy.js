@@ -14,7 +14,6 @@ const menuPage = new MenuPage()
 const myInfoPage = new MyInfoPage()
 
 
-
 describe('Orange HRM tests', () => {
 
   it('User Info Update - Success', () => {
@@ -25,7 +24,7 @@ describe('Orange HRM tests', () => {
     loginPage.loginWithUser(userData.userSucess.username, userData.userSucess.password)
     dashboardPage.checkDashboardPage()
     menuPage.acessMenu()
-    myInfoPage.personalDetails(chance.first(), chance.last(), chance.bb_pin(), chance.fbid(), chance.ssn())
+    myInfoPage.personalDetails(chance.first(), chance.last(),chance.twitter(), chance.bb_pin(), chance.fbid(), chance.ssn())
     myInfoPage.dataDetails(dataDeInicio, dataDeNascimento)
     myInfoPage.selectComboBox()
     myInfoPage.genderCheck()

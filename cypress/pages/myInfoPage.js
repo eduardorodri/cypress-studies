@@ -16,13 +16,13 @@ class MyInfoPage {
         } 
         return selectors
     }
-    personalDetails(firstName, lastName, employeeId, otherId, licenseId) {
+    personalDetails(firstName, lastName, nickName, employeeId, otherId, licenseId) {
         cy.get(this.selectorList().firstNameField).clear().type(firstName)
         cy.get(this.selectorList().lastNameField).clear().type(lastName)
-        //cy.get(this.selectorList().gerenicField).eq(3).clear().type(nickName) //nickname é um campo que só aparece as vezes nos testes
-        cy.get(this.selectorList().gerenicField).eq(3).clear().type(employeeId)
-        cy.get(this.selectorList().gerenicField).eq(4).clear().type(otherId)
-        cy.get(this.selectorList().gerenicField).eq(5).clear().type(licenseId)
+        cy.get(this.selectorList().gerenicField).eq(3).clear().type(nickName) //nickname é um campo que só aparece as vezes nos testes
+        cy.get(this.selectorList().gerenicField).eq(4).clear().type(employeeId)
+        cy.get(this.selectorList().gerenicField).eq(5).clear().type(otherId)
+        cy.get(this.selectorList().gerenicField).eq(6).clear().type(licenseId)
         //cy.get(this.selectorList().gerenicField).eq(8).clear().type("NOT") somente um teste de campo generico
     }
     dataDetails(driveLicenseDate, birthDate) {
